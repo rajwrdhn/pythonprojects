@@ -91,4 +91,25 @@ def lovecalculator():
     name1 = input("Enter the name of the first person? \n")
     name2 = input("Enter the name of the second person? \n")
 
-    
+    combined_name_lower = (name1 + name2).lower()
+
+    t = combined_name_lower.count("t")
+    r = combined_name_lower.count("r")
+    u = combined_name_lower.count("u")
+    e = combined_name_lower.count("e")
+    true = t+r+u+e
+    l = combined_name_lower.count("l")
+    o = combined_name_lower.count("o")
+    v = combined_name_lower.count("v")
+    e = combined_name_lower.count("e")
+    love = l+o+v+e
+    truelove = int(str(true)+str(love))
+
+    if truelove <10 and truelove > 90:
+        print("Like coke and mentos!")
+    elif truelove <50 and truelove > 40:
+        print("You are alright together!")
+    else:
+        print(f"Your score is {truelove}.")
+
+lovecalculator()
