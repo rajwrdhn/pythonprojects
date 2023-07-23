@@ -66,10 +66,8 @@ def recursive_calculate():
     flag = False
     while not flag:
         if s == "yes":
-            flag = True
-            num1=answer
             recursive_calculate()
         elif s == "no":
-            flag = False
+            flag = True
 
 recursive_calculate()
