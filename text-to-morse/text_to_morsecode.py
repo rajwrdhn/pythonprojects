@@ -19,11 +19,11 @@ def encrypt(message):
     morse_msg = ""
     for letter in message:
         try:
-            if letter != " ":
+            if letter in MORSE_CODE_DICT.keys():
                 morse_msg += MORSE_CODE_DICT[letter] + " "
         except KeyError:
             morse_msg = "Invalid Key!"
-            
+
     return morse_msg
 
 def main():
