@@ -13,26 +13,26 @@ MORSE_CODE_DICT = {'A': '.-', 'B': '-...',
                    '0': '-----', ', ': '--..--', '.': '.-.-.-',
                    '?': '..--..', '/': '-..-.', '-': '-....-',
                    '(': '-.--.', ')': '-.--.-'
-                }
+                   }
+
 
 def encrypt(message):
     morse_msg = ""
     for letter in message:
-        try:
-            if letter in MORSE_CODE_DICT.keys():
-                morse_msg += MORSE_CODE_DICT[letter] + " "
-            else:
-                morse_msg = "letter not in morse code!"
-                break
-        except KeyError:
-            morse_msg = "Invalid Key!"
+        if letter in MORSE_CODE_DICT.keys():
+            morse_msg += MORSE_CODE_DICT[letter] + " "
+        else:
+            morse_msg = f"{letter} not in morse code!"
+            break
 
     return morse_msg
+
 
 def main():
     message = input("Enter the message to be encrypted! \n").upper()
     morse = encrypt(message)
     print(morse)
 
-if __name__== '__main__':
+
+if __name__ == '__main__':
     main()
